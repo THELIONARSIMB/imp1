@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ram Darbar - Charitable organization in Laheriasarai, Darbhanga, Bihar. Devoted to Ram Mandir and feeding the needy.">
+    <title>Ram Darbar - Laheriasarai, Darbhanga | Service & Devotion</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- INLINE CSS -->
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #fffaf3;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #b34700;
+            letter-spacing: 1px;
+        }
+
+        .header-underline {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff9933, #ffd633, #008000);
+            margin: 10px auto 0;
+            border-radius: 999px;
+        }
+
+        .section-header p {
+            margin-top: 12px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff751a, #ff9933);
+            color: #fff;
+            box-shadow: 0 8px 18px rgba(255, 117, 26, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(255, 117, 26, 0.5);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #b34700;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .btn-link {
+            color: #b34700;
+            font-weight: 600;
+            margin-top: 12px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 250, 243, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            color: #b34700;
+            font-size: 1.2rem;
+        }
+
+        .nav-brand i {
+            color: #ff751a;
+            font-size: 1.4rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #444;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff9933, #008000);
+            transition: width 0.2s ease-in-out;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-donate {
+            padding: 8px 18px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #ff751a, #ff9933);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.45), rgba(179, 71, 0, 0.7)),
+                              url('https://images.pexels.com/photos/3857252/pexels-photo-3857252.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .hero-location {
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+
+        .hero-location i {
+            margin-right: 6px;
+        }
+
+        .hero-buttons {
+            margin-top: 22px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 24px;
+            background: rgba(255, 250, 243, 0.95);
+            padding: 12px 24px;
+            border-radius: 999px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            color: #b34700;
+            font-size: 1.2rem;
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Animations */
+        .animate-slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.7s ease forwards;
+        }
+
+        .hero-subtitle {
+            animation-delay: 0.15s;
+        }
+
+        .hero-location {
+            animation-delay: 0.3s;
+        }
+
+        .hero-buttons {
+            animation-delay: 0.45s;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* About Section */
+        .about {
+            background: #fffaf3;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .about-text h3 {
+            color: #b34700;
+            margin-bottom: 6px;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        .founder-message {
+            display: flex;
+            gap: 14px;
+            margin-top: 10px;
+            padding: 14px;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .founder-image i {
+            font-size: 2.6rem;
+            color: #ff751a;
+        }
+
+        .founder-title {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .about-image .image-placeholder {
+            border-radius: 20px;
+            background: linear-gradient(145deg, #ffe0b3, #fff);
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #b34700;
+        }
+
+        .about-image i {
+            font-size: 3rem;
+        }
+
+        /* Mandir Section */
+        .mandir {
+            background: #fff;
+        }
+
+        .mandir-content {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 32px;
+        }
+
+        .mandir-info {
+            display: grid;
+            gap: 18px;
+        }
+
+        .info-card {
+            background: #fffaf3;
+            padding: 18px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .info-card i {
+            color: #ff751a;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .info-card h3 {
+            color: #b34700;
+            margin-bottom: 4px;
+        }
+
+        .mandir-features h3 {
+            color: #b34700;
+            margin-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .feature-list i {
+            color: #008000;
+        }
+
+        /* Programs Section */
+        .programs {
+            background: #fffaf3;
+        }
+
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .program-card {
+            background: #fff;
+            padding: 22px 20px;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .program-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff7e6;
+            color: #b34700;
+            margin-bottom: 12px;
+        }
+
+        .program-card h3 {
+            color: #b34700;
+            margin-bottom: 6px;
+        }
+
+        .program-card p {
+            flex-grow: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .program-details {
+            margin-top: 10px;
+            list-style: disc;
+            padding-left: 18px;
+            flex-grow: 1;
+        }
+
+        .program-details li {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        /* Impact Section */
+        .impact {
+            background: #fff;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .impact-card {
+            background: #fffaf3;
+            padding: 18px 12px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .impact-card i {
+            font-size: 1.8rem;
+            color: #ff751a;
+            margin-bottom: 8px;
+        }
+
+        .impact-card h3 {
+            color: #b34700;
+            margin-bottom: 4px;
+        }
+
+        .impact-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: #fffaf3;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .gallery-item {
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .gallery-placeholder {
+            min-height: 160px;
+            background: linear-gradient(145deg, #ffe0b3, #fffaf3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #b34700;
+        }
+
+        .gallery-placeholder i {
+            font-size: 2rem;
+        }
+
+        /* Donation Section */
+        .donation {
+            background: #fff;
+        }
+
+        .donation-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1.5fr;
+            gap: 32px;
+        }
+
+        .donation-options {
+            background: #fffaf3;
+            padding: 22px;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .donation-options h3 {
+            color: #b34700;
+            margin-bottom: 14px;
+        }
+
+        .donation-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 8px;
+        }
+
+        .amount-btn {
+            padding: 8px 10px;
+            border-radius: 999px;
+            border: 1px solid #ffd1a3;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #b34700;
+        }
+
+        .amount-btn.active,
+        .amount-btn:hover {
+            background: #ff751a;
+            color: #fff;
+            border-color: #ff751a;
+        }
+
+        .custom-amount {
+            margin: 14px 0;
+        }
+
+        .custom-amount input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 999px;
+            border: 1px solid #ffd1a3;
+            outline: none;
+        }
+
+        .donation-type {
+            display: flex;
+            gap: 12px;
+            margin: 8px 0 16px;
+            font-size: 0.9rem;
+        }
+
+        .donation-type label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .donation-info h3 {
+            color: #b34700;
+            margin-bottom: 12px;
+        }
+
+        .donation-breakdown {
+            display: grid;
+            gap: 10px;
+        }
+
+        .breakdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 12px;
+            background: #fffaf3;
+        }
+
+        .breakdown-item i {
+            font-size: 1.4rem;
+            color: #ff751a;
+        }
+
+        .payment-methods {
+            margin-top: 16px;
+        }
+
+        .payment-methods h4 {
+            margin-bottom: 6px;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+            font-size: 1.4rem;
+            color: #555;
+        }
+
+        .payment-note {
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 4px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #fffaf3;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1.5fr;
+            gap: 32px;
+        }
+
+        .contact-info {
+            background: #fff;
+            padding: 22px;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .info-item i {
+            font-size: 1.4rem;
+            color: #ff751a;
+        }
+
+        .info-item h4 {
+            color: #b34700;
+            margin-bottom: 2px;
+        }
+
+        .social-links {
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            background: #fffaf3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b34700;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 22px;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ffd1a3;
+            outline: none;
+            font: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .map-container {
+            margin-top: 24px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #b34700;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .newsletter-content {
+            text-align: center;
+        }
+
+        .newsletter-form {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            max-width: 320px;
+            border-radius: 999px;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2b1b0f;
+            color: #f6eee4;
+            padding-top: 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 28px;
+            padding-bottom: 24px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-column p,
+        .footer-column li {
+            font-size: 0.9rem;
+            color: #e1d5c4;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 6px;
+        }
+
+        .footer-column a {
+            color: #f6eee4;
+        }
+
+        .footer-column i {
+            margin-right: 6px;
+        }
+
+        .footer-social {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0 16px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #d4c4b0;
+        }
+
+        /* Scroll Top Button */
+        .scroll-top {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            border: none;
+            background: #ff751a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-in-out;
+            z-index: 900;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 56px;
+                right: 0;
+                flex-direction: column;
+                background: rgba(255, 250, 243, 0.98);
+                width: 220px;
+                padding: 12px 16px;
+                box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+                transform: translateY(-10px);
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .nav-menu.show {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .hero {
+                height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                border-radius: 22px;
+            }
+
+            .about-content,
+            .mandir-content,
+            .donation-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .program-cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                height: 85vh;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-stats {
+                display: none;
+            }
+
+            .program-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .donation-buttons {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-om"></i>
+                <span>Ram Darbar</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#mandir" class="nav-link">Ram Mandir</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#donate" class="btn-donate">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate-slide-up">Ram Darbar</h1>
+            <p class="hero-subtitle animate-slide-up">Serving Humanity with Devotion</p>
+            <p class="hero-location animate-slide-up">
+                <i class="fas fa-map-marker-alt"></i> Laheriasarai, Darbhanga, Bihar
+            </p>
+            <div class="hero-buttons animate-fade-in">
+                <a href="#donate" class="btn btn-primary">Make a Donation</a>
+                <a href="#programs" class="btn btn-secondary">Get Involved</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <h3 class="counter" data-target="50000">0</h3>
+                <p>Meals Served</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="5000">0</h3>
+                <p>Families Helped</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="200">0</h3>
+                <p>Active Volunteers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Ram Darbar</h2>
+                <div class="header-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>Ram Darbar is dedicated to serving the community through devotion to Lord Ram and compassionate service to those in need. Founded and led by <strong>Asitya Singh</strong>, our organization operates in Laheriasarai, Darbhanga, Bihar, with the noble mission of combining spiritual devotion with social welfare.</p>
+
+                    <h3>Our Vision</h3>
+                    <p>We envision a community where no one goes hungry and everyone has access to spiritual guidance. Through our Ram Mandir and food distribution programs, we strive to create a society built on the principles of compassion, service, and devotion.</p>
+
+                    <h3>Founder's Message</h3>
+                    <div class="founder-message">
+                        <div class="founder-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="founder-text">
+                            <h4>Asitya Singh</h4>
+                            <p class="founder-title">Founder & Director</p>
+                            <p>"Service to humanity is service to God. Every meal we serve, every prayer we offer, brings us closer to the ideals taught by Lord Ram."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hands-helping"></i>
+                        <p>Community Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ram Mandir Section -->
+    <section class="mandir" id="mandir">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ram Mandir</h2>
+                <div class="header-underline"></div>
+                <p>A sacred place for devotion and spiritual growth</p>
+            </div>
+            <div class="mandir-content">
+                <div class="mandir-info">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Darshan Timings</h3>
+                        <p><strong>Morning:</strong> 6:00 AM - 12:00 PM</p>
+                        <p><strong>Evening:</strong> 4:00 PM - 9:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-prayer-hands"></i>
+                        <h3>Daily Aarti</h3>
+                        <p><strong>Morning Aarti:</strong> 7:00 AM</p>
+                        <p><strong>Evening Aarti:</strong> 7:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Special Events</h3>
+                        <p>Ram Navami, Diwali, Vivah Panchami</p>
+                        <p>Monthly Satsang Programs</p>
+                    </div>
+                </div>
+                <div class="mandir-features">
+                    <h3>Temple Services</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Daily Puja and Aarti</li>
+                        <li><i class="fas fa-check-circle"></i> Special Occasion Prayers</li>
+                        <li><i class="fas fa-check-circle"></i> Online Prasad Booking</li>
+                        <li><i class="fas fa-check-circle"></i> Spiritual Counseling</li>
+                        <li><i class="fas fa-check-circle"></i> Religious Education Classes</li>
+                        <li><i class="fas fa-check-circle"></i> Community Satsang</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <div class="header-underline"></div>
+                <p>Making a difference through dedicated service</p>
+            </div>
+            <div class="program-cards">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-bowl-rice"></i>
+                    </div>
+                    <h3>Food Distribution</h3>
+                    <p>Daily meals provided to underprivileged families in Laheriasarai and surrounding areas. Join us in our mission to end hunger.</p>
+                    <ul class="program-details">
+                        <li>Daily meal service</li>
+                        <li>Special festival distributions</li>
+                        <li>Emergency relief food packets</li>
+                    </ul>
+                    <a href="#contact" class="btn-link">Learn More →</a>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer Program</h3>
+                    <p>Become part of our dedicated team of volunteers serving the community with love and compassion.</p>
+                    <ul class="program-details">
+                        <li>Food preparation & distribution</li>
+                        <li>Temple maintenance</li>
+                        <li>Event organization</li>
+                    </ul>
+                    <a href="#contact" class="btn-link">Join Us →</a>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Supporting families in need through various welfare initiatives and community development programs.</p>
+                    <ul class="program-details">
+                        <li>Educational support</li>
+                        <li>Medical assistance</li>
+                        <li>Livelihood programs</li>
+                    </ul>
+                    <a href="#contact" class="btn-link">Get Help →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact</h2>
+                <div class="header-underline"></div>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>50,000+</h3>
+                    <p>Meals Distributed</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-users"></i>
+                    <h3>5,000+</h3>
+                    <p>Families Supported</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>200+</h3>
+                    <p>Active Volunteers</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>365</h3>
+                    <p>Days of Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <div class="header-underline"></div>
+                <p>Moments of service and devotion</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-gopuram"></i>
+                        <p>Ram Mandir</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-hands-helping"></i>
+                        <p>Food Distribution</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-people-carry"></i>
+                        <p>Volunteer Team</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-dharmachakra"></i>
+                        <p>Aarti Ceremony</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-smile"></i>
+                        <p>Community Meals</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-star-and-crescent"></i>
+                        <p>Festival Celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation" id="donate">
+        <div class="container">
+            <div class="section-header">
+                <h2>Support Our Cause</h2>
+                <div class="header-underline"></div>
+                <p>Your contribution helps us feed the hungry and serve the community</p>
+            </div>
+            <div class="donation-content">
+                <div class="donation-options">
+                    <h3>Donation Options</h3>
+                    <div class="donation-buttons">
+                        <button class="amount-btn" data-amount="500">₹500</button>
+                        <button class="amount-btn" data-amount="1000">₹1,000</button>
+                        <button class="amount-btn" data-amount="2500">₹2,500</button>
+                        <button class="amount-btn" data-amount="5000">₹5,000</button>
+                    </div>
+                    <div class="custom-amount">
+                        <input type="number" id="customAmount" placeholder="Enter custom amount" min="1">
+                    </div>
+                    <div class="donation-type">
+                        <label>
+                            <input type="radio" name="donationType" value="onetime" checked>
+                            <span>One-time Donation</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="donationType" value="monthly">
+                            <span>Monthly Donation</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary btn-full" id="donateBtn">Proceed to Donate</button>
+                </div>
+                <div class="donation-info">
+                    <h3>How Your Donation Helps</h3>
+                    <div class="donation-breakdown">
+                        <div class="breakdown-item">
+                            <i class="fas fa-bowl-rice"></i>
+                            <div>
+                                <h4>₹500</h4>
+                                <p>Feeds 20 people for a day</p>
+                            </div>
+                        </div>
+                        <div class="breakdown-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>₹2,500</h4>
+                                <p>Provides meals for a week</p>
+                            </div>
+                        </div>
+                        <div class="breakdown-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>₹5,000</h4>
+                                <p>Supports monthly food program</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-methods">
+                        <h4>We Accept</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fas fa-money-bill-wave"></i>
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <p class="payment-note">UPI, Cards, Net Banking, Paytm accepted</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="header-underline"></div>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Ram Darbar<br>Laheriasarai, Darbhanga<br>Bihar, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91-XXXXX-XXXXX</p>
+                            <p>+91-XXXXX-XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@ramdarbar.org</p>
+                            <p>asityasingh@ramdarbar.org</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday - Saturday: 9 AM - 6 PM</p>
+                            <p>Sunday: 9 AM - 2 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject">
+                                <option value="">Select Subject</option>
+                                <option value="volunteer">Volunteer Inquiry</option>
+                                <option value="donation">Donation Query</option>
+                                <option value="help">Need Help</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.8267894329!2d85.96!3d26.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA5JzAwLjAiTiA4NcKwNTcnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for updates on our activities and programs</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ram Darbar</h3>
+                    <p>Serving the community with devotion and compassion. Dedicated to Lord Ram and helping those in need.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#mandir">Ram Mandir</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul>
+                        <li><a href="#donate">Make a Donation</a></li>
+                        <li><a href="#contact">Volunteer</a></li>
+                        <li><a href="#programs">Our Programs</a></li>
+                        <li><a href="#contact">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Laheriasarai, Darbhanga, Bihar</li>
+                        <li><i class="fas fa-phone"></i> +91-XXXXX-XXXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@ramdarbar.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ram Darbar, Laheriasarai. Founded by Asitya Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- INLINE JS -->
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (navToggle && navMenu) {
+          navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+          });
+
+          // Close nav on link click (mobile)
+          document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+              navMenu.classList.remove('show');
+            });
+          });
+        }
+
+        // Sticky navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 10) {
+            navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+          } else {
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.06)';
+          }
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // lower is faster
+
+        const animateCounters = () => {
+          counters.forEach(counter => {
+            const updateCount = () => {
+              const target = +counter.getAttribute('data-target');
+              const count = +counter.innerText;
+              const inc = Math.max(target / speed, 1);
+
+              if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 20);
+              } else {
+                counter.innerText = target.toLocaleString('en-IN');
+              }
+            };
+
+            updateCount();
+          });
+        };
+
+        let countersStarted = false;
+        window.addEventListener('scroll', () => {
+          const heroStats = document.querySelector('.hero-stats');
+          if (!heroStats) return;
+
+          const rect = heroStats.getBoundingClientRect();
+          if (!countersStarted && rect.top < window.innerHeight) {
+            countersStarted = true;
+            animateCounters();
+          }
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 400) {
+            scrollTopBtn.classList.add('show');
+          } else {
+            scrollTopBtn.classList.remove('show');
+          }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              const offset = navbar.offsetHeight;
+              const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition - offset + 2;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Donation button logic
+        const amountButtons = document.querySelectorAll('.amount-btn');
+        const customAmountInput = document.getElementById('customAmount');
+        const donateBtn = document.getElementById('donateBtn');
+
+        let selectedAmount = 0;
+
+        amountButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            amountButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedAmount = parseInt(btn.dataset.amount, 10);
+            customAmountInput.value = '';
+          });
+        });
+
+        customAmountInput.addEventListener('input', () => {
+          amountButtons.forEach(b => b.classList.remove('active'));
+          selectedAmount = parseInt(customAmountInput.value, 10) || 0;
+        });
+
+        if (donateBtn) {
+          donateBtn.addEventListener('click', () => {
+            const donationType = document.querySelector('input[name="donationType"]:checked').value;
+
+            if (!selectedAmount || selectedAmount <= 0) {
+              alert('Please select or enter a valid donation amount.');
+              return;
+            }
+
+            alert(`Thank you for choosing to donate ₹${selectedAmount} as a ${donationType === 'monthly' ? 'monthly' : 'one-time'} contribution.\n\nIn a real website, this button would take you to a secure payment gateway (Razorpay/UPI/etc.).`);
+          });
+        }
+
+        // Contact form handler
+        const contactForm = document.getElementById('contactForm');
+
+        if (contactForm) {
+          contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out to Ram Darbar. Your message has been received. Our team will contact you soon.');
+            contactForm.reset();
+          });
+        }
+
+        // Newsletter form handler
+        const newsletterForm = document.getElementById('newsletterForm');
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to the Ram Darbar newsletter.');
+            newsletterForm.reset();
+          });
+        }
+    </script>
+</body>
+</html>
